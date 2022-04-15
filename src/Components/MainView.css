@@ -1,0 +1,14 @@
+.main {
+    color: black;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px;
+}
+
+.active {
+    display: block;
+}
+
+.unactive {
+    display: none;
+}
