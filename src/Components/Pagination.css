@@ -1,13 +1,24 @@
 .pagesList {
-    list-style: none;
-    display: inline-flex;
-}
-
-.pageNumber {
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .pageNumber {
     margin: 2px;
     border: 1px solid black;
-}
-
-.pageNumber a {
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-flex;
+  }
+  
+  li {
+    background-color: #15883e;
+  }
+  
+  .pageNumber a {
     text-decoration: none;
-}
+    width: 15px;
+    color: white;
+    font-weight: 600;
+  }
+  

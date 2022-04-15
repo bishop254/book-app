@@ -1,14 +1,81 @@
-.main {
+.mainDiv {
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    row-gap: 30px;
+  }
+  
+  .main {
     color: black;
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 15px;
-}
-
-.active {
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    height: 45vh;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: cursive;
+    border-bottom: 1px solid black;
+  }
+  
+  .split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  
+  .left {
+    background-color: rgb(108 221 143);
+    border-bottom-left-radius: 44px;
+    border-top-left-radius: 44px;
+    margin-right: 5px;
+  }
+  
+  .right {
+    background-color: rgb(92 235 175);
+    border-bottom-right-radius: 44px;
+    border-top-right-radius: 44px;
+    margin-left: 5px;
+  }
+  
+  .centered {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .token {
+    text-align: center;
+  }
+  
+  .token button {
+    cursor: pointer;
+    border-radius: 500px;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    color: #fff;
+    background-color: #15883e;
+    height: 48px;
+  }
+  
+  .tokenInfo {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  .active {
     display: block;
-}
-
-.unactive {
+  }
+  
+  .unactive {
     display: none;
-}
+  }
+  
