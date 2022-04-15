@@ -1,9 +1,28 @@
-import React from 'react'
+import React from "react";
+import "./Pagination.css";
 
-const Pagination = () => {
+//paginate is a function that will update our view as the user navigates through the pages.
+const Pagination = ({ pagesToDisplay, totalPages, paginate }) => {
+  const pageNumbers = [];
+  const pageCount = Math.ceil(totalPages / pagesToDisplay);
+
+  for (let page = 1; page <= pageCount; page++) {
+    pageNumbers.push(page);
+  }
+
   return (
-    <div>Pagination</div>
-  )
-}
+    <nav>
+      <ul className="pagesList">
+        {pageNumbers.map((pageNo) => (
+          <li className="pageNumber">
+            <a href="!#" onClick={() => paginate(pageNo)}>
+              {pageNo}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-export default Pagination
+export default Pagination;
