@@ -1,0 +1,13 @@
+.pagesList {
+    list-style: none;
+    display: inline-flex;
+}
+
+.pageNumber {
+    margin: 2px;
+    border: 1px solid black;
+}
+
+.pageNumber a {
+    text-decoration: none;
+}
