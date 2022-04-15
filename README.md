@@ -33,3 +33,10 @@ After cloning the repository:
 npm start
 ```
 
+---
+## Preview of the app
+**Main display**
+![Main view Display](public/pic1.png)
+
+**Token Value Display**
+![Main view Display](public/pic2.png)
