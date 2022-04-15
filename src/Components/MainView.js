@@ -11,6 +11,7 @@ const BOOK_QUERY = gql`
       title
       pages {
         content
+        pageIndex
         tokens {
           value
         }
@@ -23,7 +24,6 @@ const MainView = () => {
   const { data, loading, error } = useQuery(BOOK_QUERY); //data is the object returned from our endpoint.
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 2;
-  let index = 0;
 
   if (loading) return <div>Loading...</div>;
 

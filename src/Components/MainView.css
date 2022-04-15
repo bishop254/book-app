@@ -45,6 +45,8 @@
   .centered {
     text-align: center;
     margin: auto;
+    font-size: 20px;
+    padding: 2px;
   }
   
   .token {
