@@ -15,7 +15,7 @@ const Pagination = ({ pagesToDisplay, totalPages, paginate }) => {
       <nav>
         <ul className="pagesList">
           {pageNumbers.map((pageNo) => (
-            <li className="pageNumber">
+            <li className="pageNumber" key={pageNo}>
               <a href="!#" onClick={() => paginate(pageNo)}>
                 {pageNo}
               </a>
