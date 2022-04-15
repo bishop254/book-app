@@ -19,6 +19,9 @@ npm install @apollo/client graphql -legacy-peer-deps
    * `./ApolloClient/client.js`
 * Wrap **App** component inside an **ApolloProvider** to connect our *Apollo Client* to React.
   * *Apollo Client* is now available from anywhere in the component tree.
-* 
+* We will require 3 additional components
+  * **MainView** which consumes data fetched from our query.
+  * **Content** which takes in a pair of pages with sentences.
+  * **Pagination** which allows for page switching.
 
 
