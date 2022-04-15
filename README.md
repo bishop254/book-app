@@ -21,7 +21,15 @@ npm install @apollo/client graphql -legacy-peer-deps
   * *Apollo Client* is now available from anywhere in the component tree.
 * We will require 3 additional components
   * **MainView** which consumes data fetched from our query.
-  * **Content** which takes in a pair of pages with sentences.
+  * **Content** which takes in a pair of pages with sentences. It also listen to click events.
   * **Pagination** which allows for page switching.
+* Write logic for our 3 components.
+* Add CSS styling to the App.
 
+---
+## Running the book-app
+After cloning the repository:
+```bash
+npm start
+```
 

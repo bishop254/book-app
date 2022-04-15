@@ -1,6 +1,6 @@
 import React from "react";
 
-const Content = ({ item, token }) => {
+const Content = ({ item, index, token }) => {
   let arr = item.split(" ");
 
   //Display token value on user click event
@@ -12,12 +12,14 @@ const Content = ({ item, token }) => {
     //Display the token value on the current user view.
     let mainDiv = document.querySelector(".main");
     let tokenDiv = document.querySelector(".token");
+    let pagesDiv = document.querySelector(".pagesDiv");
     let newElement = document.createElement("div");
 
     newElement.classList.add("tokenInfo"); //Gives it a className which allows us to remove this element when needed.
     newElement.innerHTML = tokenArr[0].value; //tokenArr may return an array with more than one element.
 
     mainDiv.classList.add("unactive");
+    pagesDiv.classList.add("unactive");
     tokenDiv.classList.remove("unactive");
 
     tokenDiv.appendChild(newElement);
