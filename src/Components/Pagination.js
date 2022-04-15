@@ -11,17 +11,19 @@ const Pagination = ({ pagesToDisplay, totalPages, paginate }) => {
   }
 
   return (
-    <nav>
-      <ul className="pagesList">
-        {pageNumbers.map((pageNo) => (
-          <li className="pageNumber">
-            <a href="!#" onClick={() => paginate(pageNo)}>
-              {pageNo}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="pagesDiv">
+      <nav>
+        <ul className="pagesList">
+          {pageNumbers.map((pageNo) => (
+            <li className="pageNumber">
+              <a href="!#" onClick={() => paginate(pageNo)}>
+                {pageNo}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
 
