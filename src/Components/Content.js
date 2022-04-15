@@ -6,7 +6,10 @@ const Content = ({ item, index, token }) => {
   //Display token value on user click event
   const handleClick = (event) => {
     let clickedWord = event.target.innerHTML.toLowerCase();
-    let cleanWord = clickedWord.replace(/\W*$/i, ""); // Regex to remove punctuation marks after word.
+    
+    // Regex to remove punctuation marks after word.
+    let cleanWord = clickedWord.replace(/\W*$/i, ""); 
+    cleanWord = cleanWord.replace(/^\W/gi, "");
 
     let tokenArr = token.filter(
       (tk) => clickedWord.includes(tk.value) && tk.value === cleanWord
@@ -19,7 +22,7 @@ const Content = ({ item, index, token }) => {
     let newElement = document.createElement("div");
 
     newElement.classList.add("tokenInfo"); //Gives it a className which allows us to remove this element when needed.
-    newElement.innerHTML = tokenArr[0].value; //tokenArr may return an array with more than one element.
+    newElement.innerHTML = tokenArr[0]?.value; //tokenArr may return an array with more than one element.
 
     mainDiv.classList.add("unactive");
     pagesDiv.classList.add("unactive");

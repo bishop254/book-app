@@ -4,7 +4,7 @@ import "./MainView.css";
 import Content from "./Content";
 import Pagination from "./Pagination";
 
-const BOOK_QUERY = gql`
+export const BOOK_QUERY = gql`
   query GetBook {
     book {
       author
@@ -54,8 +54,8 @@ const MainView = () => {
   return (
     <div className="mainDiv">
       <div className="header">
-        <p>{data.book.author}</p>
-        <p>{data.book.title}</p>
+        <h1>{data.book.title}</h1>
+        <p>...written by {data.book.author}</p>
       </div>
       <div className="main">
         {currPages.map((page) => {
