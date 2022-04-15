@@ -6,8 +6,11 @@ const Content = ({ item, index, token }) => {
   //Display token value on user click event
   const handleClick = (event) => {
     let clickedWord = event.target.innerHTML.toLowerCase();
+    let cleanWord = clickedWord.replace(/\W*$/i, ""); // Regex to remove punctuation marks after word.
 
-    let tokenArr = token.filter((tk) => clickedWord.includes(tk.value)); // Allows us to match a word that is beside a punctuation mark(", ., ?)
+    let tokenArr = token.filter(
+      (tk) => clickedWord.includes(tk.value) && tk.value === cleanWord
+    ); // Allows us to match a word that is beside a punctuation mark(", ., ?)
 
     //Display the token value on the current user view.
     let mainDiv = document.querySelector(".main");
